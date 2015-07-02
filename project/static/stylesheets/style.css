@@ -31,14 +31,10 @@ p {
   width: 145px;
   margin-top: 21px;
 }
-.portfolio a {
-    width: 32%;
-    position: relative;
-    float: left;
-    margin-right: 1%;
-}
 .portfolio img {
-    width: 100%;
+    width: 32%;
+    float: left;
+    margin: 1% 1% 0 0;    
 }
 
 .white-text .fa {

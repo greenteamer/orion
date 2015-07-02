@@ -8,10 +8,13 @@
 {# <script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}"></script>#}
 <script type="text/javascript" src="{% static 'bower_components/materialize/dist/js/materialize.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/init.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/fancybox/source/jquery.fancybox.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/fancybox/source/jquery.fancybox.pack.js' %}"></script>
+{# <script type="text/javascript" src="{% static 'bower_components/fancybox/source/jquery.fancybox.js' %}"></script>#}
+{# <script type="text/javascript" src="{% static 'bower_components/fancybox/source/jquery.fancybox.pack.js' %}"></script>#}
 <script type="text/javascript">
-    $(document).ready(function() {
-    	$(".fancybox").fancybox();
+    // $(document).ready(function() {
+    // 	$(".fancybox").fancybox();
+    // });
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
     });
 </script>
