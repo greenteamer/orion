@@ -67,3 +67,23 @@ p {
 footer.page-footer {
   margin: 0;
 }
+nav .contacts p{
+    margin:0px;
+    color: #5C5C5C;
+    line-height: 20px;
+}
+nav .contacts {
+    padding-top: 10px;
+}
+nav .phone_icon i {
+    color: #795548;
+    line-height: 47px;
+}
+nav .phone_icon {
+    margin: 5px 20px;
+    height: 50px;
+    width: 50px;
+    padding: 0 13px;
+    border: 1px solid #9D9D9D;
+    border-radius: 50px;
+}

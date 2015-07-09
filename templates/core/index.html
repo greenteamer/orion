@@ -1,2 +1,168 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+
+{% block content %}
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Натяжные потолки<br/>Орион*</h1>
+            <div class="row center">
+              <h5 class="header col s12 light">* Потолок   на 5 звезд</h5>
+            </div>
+            <div class="row center">
+              <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Заказать сейчас</a>
+            </div>
+            <br><br>
+
+          </div>
+        </div>
+        <div class="parallax"><img src="{% static 'images/background1.jpg' %}" alt="Unsplashed background img 1"></div>
+      </div>
+
+
+      <div class="container">
+        <div class="section">
+
+          <!--   Icon Section   -->
+          <div class="row">
+              {% for block in blocks %}
+                <div class="col s12 m4">
+                  <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">{{ block.icon }}</i></h2>
+                    <h5 class="center">{{ block.title }}</h5>
+
+                    <p class="light">{{ block.text }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+
+{#            <div class="col s12 m4">#}
+{#              <div class="icon-block">#}
+{#                <h2 class="center brown-text"><i class="material-icons">group</i></h2>#}
+{#                <h5 class="center">Сосредоточенность на Ваших пожеланиях</h5>#}
+{##}
+{#                <p class="light">Индивидуальный подход к каждому заказу</p>#}
+{#              </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col s12 m4">#}
+{#              <div class="icon-block">#}
+{#                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>#}
+{#                <h5 class="center">Легко работать с нашими специалистами</h5>#}
+{##}
+{#                <p class="light"> Всегда готовы помочь вам выбрать лучшее </p>#}
+{#              </div>#}
+{#            </div>#}
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h5 class="header col s12 light">{{ page.trigger1 }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="{% static 'images/background2.jpg' %}" alt="Unsplashed background img 2"></div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+
+          <div class="row">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4>{{ page.block_name }}</h4>
+              <p class="left-align light">{{ page.text }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+
+          <div class="row">
+              <div class="col s12 center portfolio">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Наши работы</h4>
+                <!-- <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p> -->
+                <!-- <div class="row"> -->
+
+                  {% for image in images %}
+                    <img alt="" class="materialboxed" src="/media/{{ image.image }}">
+                  {% endfor %}
+
+{#                	<img alt="" class="materialboxed" src="{% media 'images/portfolio/1.jpg' %}">#}
+{#                    <img alt="" class="materialboxed" src="{% static 'images/portfolio/2.jpg' %}">#}
+{#                	<img alt="" class="materialboxed" src="{% static 'images/portfolio/3.jpg' %}">#}
+{#                    <img alt="" class="materialboxed" src="{% static 'images/portfolio/4.jpg' %}">#}
+{#                	<img alt="" class="materialboxed" src="{% static 'images/portfolio/5.jpg' %}">#}
+{#                    <img alt="" class="materialboxed" src="{% static 'images/portfolio/6.jpg' %}">#}
+
+                <!-- </div> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h5 class="header col s12 light">{{ page.trigger2 }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="{% static 'images/background3.jpg' %}" alt="Unsplashed background img 3"></div>
+      </div>
+
+      <footer class="page-footer teal">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">{{ page.footer_name }}</h5>
+              <p class="grey-text text-lighten-4">{{ page.footer_text }}</p>
+
+
+            </div>
+            <div class="col l3 s12">
+{#              <h5 class="white-text">Settings</h5>#}
+{#              <ul>#}
+{#                <li><a class="white-text" href="#!">Link 1</a></li>#}
+{#                <li><a class="white-text" href="#!">Link 2</a></li>#}
+{#                <li><a class="white-text" href="#!">Link 3</a></li>#}
+{#                <li><a class="white-text" href="#!">Link 4</a></li>#}
+{#              </ul>#}
+            </div>
+            <div class="col l3 s12">
+              <h5 class="white-text">Мы в соцсетях</h5>
+              <ul>
+                  <li><a class="white-text" href=""><i class="fa fa-youtube-square"></i> youtube</a></li>
+                  <li><a class="white-text" href="http://vk.com/greenteamer"><i class="fa fa-vk"></i> вконтакте</a></li>
+                  <li><a class="white-text" href=""><i class="fa fa-facebook"></i> facebook</a></li>
+                  <li><a class="white-text" href=""><i class="fa fa-twitter"></i> twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Forward Group</a>
+          </div>
+        </div>
+      </footer>
+
+{% endblock %}
