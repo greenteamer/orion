@@ -10,34 +10,31 @@
 </head>
 
     <body>
+        {% block header %}
+            <nav class="white" role="navigation">
+                <div class="nav-wrapper container">
+                    <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/logo4.png' %}" alt=""></a>
 
-      <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/logo4.png' %}" alt=""></a>
+                    <div class="right contacts">
+                        <p>тел: {{ contacts.phone }}</p>
+                        <p>email: {{ contacts.email }}</p>
+                    </div>
+                    <div class="right phone_icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
 
-            <div class="right contacts">
-                <p>тел: 8-913-888-5045</p>
-                <p>email: orion-potolok@yandex.ru</p>
-            </div>
-            <div class="right phone_icon">
-                <i class="fa fa-phone"></i>
-            </div>
-
-{#            <ul class="right hide-on-med-and-down">#}
-{#                <li><a href="#">Контакты</a></li>#}
-{#                <li>8-913-848-4543</li>#}
-{#            </ul>#}
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-      </nav>
+                    <ul id="nav-mobile" class="side-nav">
+                        <li><a href="#">Navbar Link</a></li>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        {% endblock %}
 
         {% block content %}
         {% endblock %}
 
         {% include 'javascripts.html' %}
+
     </body>
 </html>

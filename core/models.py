@@ -47,3 +47,29 @@ class Photo(models.Model):
 
     def __unicode__(self):
         return "%s" % self.id
+
+
+class Contacts(models.Model):
+    phone = models.CharField(max_length=20, verbose_name=u"Телефон")
+    name = models.CharField(max_length=20, verbose_name=u"Имя")
+    email = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name = u"Контакт сайта"
+        verbose_name_plural = u"Контакты сайта"
+
+    def __unicode__(self):
+        return u"Контакты %s" % self.name
+
+
+class SocialContacts(models.Model):
+    name = models.CharField(max_length=50, verbose_name=u"Название социальной сети")
+    link = models.CharField(max_length=150, verbose_name=u"Ссылка на персональную страницу")
+    contact = models.ForeignKey(Contacts)
+
+    class Meta:
+        verbose_name = u"Слциальная сеть"
+        verbose_name_plural = u"Социальные сети"
+
+    def __unicode__(self):
+        return u"Аккаунт %s" % self.name
