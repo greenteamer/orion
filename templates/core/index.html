@@ -12,7 +12,24 @@
               <h5 class="header col s12 light">* Потолок   на 5 звезд</h5>
             </div>
             <div class="row center">
-              <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Заказать сейчас</a>
+              {# <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Заказать сейчас</a>#}
+              <a class="btn-large waves-effect waves-light btn modal-trigger" href="#modal1">Заказать сейчас</a>
+
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal">
+                  <form class="" action="." method="post">{% csrf_token %}
+                      <div class="modal-content">
+                          <h4>Закажите сейчас</h4>
+                          <input type="text" name="name" value="">
+                          <input type="text" name="phone" value="">
+                      </div>
+                      <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Зактрыть</a>
+                          <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" name="submit">Отправить</button>
+                      </div>
+                  </form>
+              </div>
+
             </div>
             <br><br>
 
@@ -34,6 +51,7 @@
                     <h5 class="center">{{ block.title }}</h5>
 
                     <p class="light">{{ block.text }}</p>
+
                   </div>
                 </div>
               {% endfor %}
